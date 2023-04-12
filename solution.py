@@ -20,7 +20,7 @@ def solution(x_success: int,
     stat, pval = proportions_ztest(count, nobs, alternative='smaller')
     #print('{0:0.3f}'.format(pval))
 
-    if pval <= pval_tz:
+    if pval < pval_tz:
       return True
     else:
       return False
